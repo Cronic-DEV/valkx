@@ -9,7 +9,7 @@ local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.Plac
         
     wait(1)
 
-do local GUI = game.CoreGui:FindFirstChild("Valk X");if GUI then GUI:Destroy();end;if _G.Color == nil then
+do local GUI = game.CoreGui:FindFirstChild("ValkX");if GUI then GUI:Destroy();end;if _G.Color == nil then
        _G.Color = Color3.fromRGB(147,112,219)
    end 
 end
@@ -68,17 +68,17 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-local Valk XX = {}
+local ValkXX = {}
 
-function Valk XX:ToggleUi()
-if game.CoreGui:FindFirstChild("Valk X").Enabled == true then -- oh am dumb
-game.CoreGui:FindFirstChild("Valk X").Enabled = false
+function ValkXX:ToggleUi()
+if game.CoreGui:FindFirstChild("ValkX").Enabled == true then -- oh am dumb
+game.CoreGui:FindFirstChild("ValkX").Enabled = false
 else
-game.CoreGui:FindFirstChild("Valk X").Enabled = true
+game.CoreGui:FindFirstChild("ValkX").Enabled = true
 end
 end
 
-function Valk XX:Window(text,gamenme,logo,keybind)
+function ValkXX:Window(text,gamenme,logo,keybind)
     local hubname = text
     local gamename = gamenme
 	local uihide = false
@@ -91,14 +91,14 @@ function Valk XX:Window(text,gamenme,logo,keybind)
 	    gamename = ""..PlaceName.Name
     end
 	
-	local Valk X = Instance.new("ScreenGui") -- guess i am using hubname wrong
-	Valk X.Name = "Valk X" -- wait
-	Valk X.Parent = game.CoreGui
-	Valk X.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	local ValkX = Instance.new("ScreenGui") -- guess i am using hubname wrong
+	ValkX.Name = "ValkX" -- wait
+	ValkX.Parent = game.CoreGui
+	ValkX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	local Main = Instance.new("Frame")
 	Main.Name = "Main"
-	Main.Parent = Valk X
+	Main.Parent = ValkX
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5,0.5)
 	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -1032,4 +1032,4 @@ function Valk XX:Window(text,gamenme,logo,keybind)
 	end
 	return uitab
 end
-return Valk XX
+return ValkXX
